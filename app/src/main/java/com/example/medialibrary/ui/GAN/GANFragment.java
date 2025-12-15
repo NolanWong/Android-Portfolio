@@ -14,12 +14,12 @@ import androidx.fragment.app.Fragment;
 import com.example.medialibrary.databinding.FragmentGanBinding;
 
 import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class GANFragment extends Fragment {
 
     private FragmentGanBinding binding;
     // 1. Declare your ViewModel
+    int guesses = 10;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -32,12 +32,16 @@ public class GANFragment extends Fragment {
         // 2. Generate a random integer:
         //    a. Full range (including negative numbers):
         int hidden = rand.nextInt(1,100);
-        AtomicInteger guesses = new AtomicInteger(10);
+        //had to do this because Android
         //code here
-        final TextView
-        binding.submitBTN.setOnClickListener(v -> {
+        final TextView GuessTXT=binding.GuessTXT;
+        binding.submitBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
             String inputString = binding.inputText.getText().toString();
-		        try {
                 int finalValue = Integer.parseInt(inputString); // Convert the string to an int
                 // Use the finalValue here (e.g., for calculations, setting another TextView)
                     if (finalValue<hidden){
@@ -50,17 +54,9 @@ public class GANFragment extends Fragment {
                         textView.setText("Correct!!");
                         binding.correct.setVisibility(VISIBLE);
                     }
-                    //had to do this because lambda
+                    //had to do this because Android
 
-                    guesses.addAndGet(-1);
-                // ...
-            } catch (NumberFormatException e) {
-                // Handle the exception if the input is not a valid number
-                textView.setText("Invalid option");
-                // Optional: set a default value or clear the EditText
-            }
-
-        });
+        }});
 
 
         return root;
