@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".ui.MadLib.MadLibFragment">
+
+
+    <!-- This ScrollView will let your list scroll if it gets too long -->
+
+
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/startMSG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello, welcome to the Madlib Generator!"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/screen2BTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#AB4A4A"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/backBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:visibility="gone"
+            tools:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="text"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="Place"
+            android:inputType="text"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/pluralNoun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="Plural Noun"
+            android:inputType="text"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/adj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="Adjective"
+            android:inputType="text"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/verb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="Verb"
+            android:inputType="text"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/animal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="Animal"
+            android:inputType="text"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/silly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="Silly noun"
+            android:inputType="text"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/object"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="Object"
+            android:inputType="text"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/readyBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#AB4A4A"
+            android:text="Start" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/third"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter 1 to hear about a daring escape, 2 for an experiment gone wrong, or 3 for a talent show gone wild."
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/choice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000" />
+
+
+        <Button
+            android:id="@+id/genBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#AB4A4A"
+            android:text="Start" />
+    </LinearLayout>
+    <!--    Mad Libs From ChatGPT-->
+
+    <!--    A Day in the Park-->
+    <!--    Magical Discovery-->
+    <TextView
+        android:id="@+id/magic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+    </TextView>
+
+    <!--    Space Mission Gone Wrong-->
+    <TextView
+        android:id="@+id/park"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/park"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
